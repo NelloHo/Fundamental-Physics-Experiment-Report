@@ -1,1 +1,1 @@
-This file is for images !!
+# This file is for images !!
