@@ -1,13 +1,16 @@
 \documentclass{article}
 
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc} % For encoding
 \usepackage{graphicx} % For including images
 \usepackage{amsmath} % For mathematical formulas
 \usepackage{biblatex} % For bibliography management
+\usepackage{float} % For fixing the position of tables/figures
+\usepackage{xeCJK} % For handling Chinese characters
+
 \addbibresource{references.bib} % Add your bibliography file here
 
-\title{Your Document Title}
-\author{Your Name}
+\title{Microwave Experiment}
+\author{Chen En, Ho}
 \date{\today}
 
 \begin{document}
@@ -28,7 +31,41 @@ Here, describe the methods and approaches you used in your research or study.
 This section includes the description of the experimental setup and apparatus you used in your work.
 
 \section{Results \& Discussions}
-Present the results of your study and provide a detailed discussion. Use tables, figures, and equations if necessary.
+
+The table below presents the data for \( V_{\text{peak-low}} \) and \( \frac{1}{4} \lambda \), along with the calculated mean and uncertainties for \( \lambda \).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \( V_{\text{peak-low}} \) & \( V_{\text{peak-low}} \) & \( \frac{1}{4} \lambda \) (mm) \\
+        \hline
+        157 & 147.5 & 9.5 \\
+        147.5 & 137 & 10.5 \\
+        137 & 124 & 13 \\
+        124 & 113.5 & 10.5 \\
+        113.5 & 101.5 & 12 \\
+        101.5 & 91.5 & 10 \\
+        91.5 & 79.9 & 11.6 \\
+        \hline
+    \end{tabular}
+    \caption{Values of \( V_{\text{peak-low}} \) and corresponding \( \frac{1}{4} \lambda \).}
+\end{table}
+
+Therefore, the wavelength \( \lambda \) with its total uncertainty is:
+
+\[
+\lambda = 0.04406 \, \text{m} \pm 0.00186 \, \text{m} \quad (4.23\%)
+\]
+
+A linear regression analysis was conducted to analyze the relationship between $\log \bar{I}$ and $n \log \sin\left(2 \pi d / \lambda \right) + \log C$. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{lab1.png}
+    \caption{Linear regression analysis of $\log \bar{I}$ vs $n \log \sin\left(2 \pi d / \lambda \right) + \log C$.}
+    \label{fig:regression}
+\end{figure}
 
 \section{Textbook Questions}
 Here, include any questions from textbooks or exercises that are relevant to your topic.
