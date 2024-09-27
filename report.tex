@@ -31,7 +31,9 @@ This section includes the description of the experimental setup and apparatus yo
 
 \section{Results \& Discussions}
 
-The table below presents the data for \( V_{\text{peak-low}} \) and \( \frac{1}{4} \lambda \), along with the calculated mean and uncertainties for \( \lambda \).
+
+
+The table below presents the data for \( V_{\text{peak-low}} \) and \( \frac{1}{4} \lambda \), along with the calculated mean and uncertainties for \( \lambda \)\footnote{In this article, the uncertainties consist of both Type A and Type B uncertainties. The total uncertainty is calculated using error propagation.}.
 
 \begin{table}[H]
     \centering
@@ -82,12 +84,20 @@ Then, a relationship between the intensity $I$ and the distance from a node $d$ 
     \caption{Values of \( I (\nu A) \), \( I \, \text{(A)} \), \( d \, \text{(mm)} \), and \( \bar{d} \, \text{(m)} \).}
 \end{table}
 
-
-A linear regression analysis was conducted to analyze the relationship between $\log \bar{I}$ and $n \log \sin\left(2 \pi d / \lambda \right) + \log C$. 
+If we plot $I$ versus $sin(2\pi d/\lambda_g)$, we found that the result is close to a exponential graph (except the last data).
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{./media/lab1.png}
+    \includegraphics[width=0.8\textwidth]{./media/lab1 raw I-V.png}
+    \caption{ $I$(A)-$sin(2\pi d/\lambda_g$) characteristics from the experiment.}
+    \label{fig:raw_iv}
+\end{figure}
+
+Hence, we can guess $I=C\cdot sin(\frac{2\pi d}{\lambda_g})^n$. A linear regression analysis was conducted. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{./media/lab1.png}
     \caption{Linear regression analysis of $\log \bar{I}$ vs $n \log \sin\left(2 \pi d / \lambda \right) + \log C$.}
     \label{fig:regression}
 \end{figure}
