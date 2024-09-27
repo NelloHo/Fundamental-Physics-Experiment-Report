@@ -5,7 +5,6 @@
 \usepackage{amsmath} % For mathematical formulas
 \usepackage{biblatex} % For bibliography management
 \usepackage{float} % For fixing the position of tables/figures
-\usepackage{xeCJK} % For handling Chinese characters
 
 \addbibresource{references.bib} % Add your bibliography file here
 
@@ -58,14 +57,48 @@ Therefore, the wavelength \( \lambda \) with its total uncertainty is:
 \lambda = 0.04406 \, \text{m} \pm 0.00186 \, \text{m} \quad (4.23\%)
 \]
 
+Then, a relationship between the intensity $I$ and the distance from a node $d$ is measured. 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        I ($\nu$A) & \( I \) (A) & d (mm) & \( \bar{d} \) (m) \\
+        \hline
+        -0.0025 & -2.7E-09 & 136.9 & 1E-04 \\
+        -0.0027 & 1.2E-08 & 137 & 0.0011 \\
+        0.012 & 3.75E-08 & 138 & 0.0021 \\
+        0.0375 & 8.58E-08 & 139 & 0.0031 \\
+        0.0858 & 1.216E-07 & 140 & 0.0041 \\
+        0.1216 & 1.698E-07 & 141 & 0.0051 \\
+        0.1698 & 2.264E-07 & 142 & 0.0061 \\
+        0.2264 & 2.792E-07 & 143 & 0.0071 \\
+        0.2792 & 3.178E-07 & 144 & 0.0081 \\
+        0.3178 & 3.54E-07 & 145 & 0.0091 \\
+        0.354 & 3.636E-07 & 146 & 0.01081 \\
+        0.3636 & & 147.71 & \\
+        \hline
+    \end{tabular}
+    \caption{Values of \( I (\nu A) \), \( I \, \text{(A)} \), \( d \, \text{(mm)} \), and \( \bar{d} \, \text{(m)} \).}
+\end{table}
+
+
 A linear regression analysis was conducted to analyze the relationship between $\log \bar{I}$ and $n \log \sin\left(2 \pi d / \lambda \right) + \log C$. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{lab1.png}
+    \includegraphics[width=\textwidth]{./media/lab1.png}
     \caption{Linear regression analysis of $\log \bar{I}$ vs $n \log \sin\left(2 \pi d / \lambda \right) + \log C$.}
     \label{fig:regression}
 \end{figure}
+
+we get:
+
+\[
+n = 1.931 \pm 0.024 \quad (1.24\%)
+\]
+
+
 
 \section{Textbook Questions}
 Here, include any questions from textbooks or exercises that are relevant to your topic.
