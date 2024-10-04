@@ -1,0 +1,205 @@
+%% LyX 2.4.1 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{article}
+\usepackage{CJKutf8}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wasysym}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+\makeatother
+
+\begin{document}
+\begin{CJK}{UTF8}{}%
+
+\part*{1. Introduction}
+
+The experiment mainly utilizes microwaves through instruments such
+as waveguides to measure wavelength, power, standing wave ratio (SWR),
+and the characteristics of dielectric materials.
+
+\section*{1.1 Microwave}
+
+Microwaves are electromagnetic waves with frequencies ranging from
+300 MHz to 300 GHz, commonly used in fields such as communication
+and radar.
+
+\section*{1.2 Waveguide}
+
+Waveguides are structures used for transmitting microwaves, typically
+made of metal. They usually come in rectangular, square, or elliptical
+shapes and are characterized by low loss. Microwaves propagate primarily
+through modes, where the electromagnetic field distribution depends
+on specific boundary conditions. In this experiment, we focus on the
+$TE_{10}$ modes of a rectangular waveguide. This means that when
+the electric field varies once along the width of the waveguide and
+remains constant along the other direction.Through the following calculation,
+we can obtain the electromagnetic field distribution for modes in
+the waveguide: Consider a ratangular waveguide in figure 1.1: 
+\begin{enumerate}
+\item \begin{flushleft}
+\begin{figure}[h]
+\centering
+\label{figure=0000201.1:=000020Rectangular=000020waveguide-1}\includegraphics[scale=0.2]{\string"figure1.1 Rectangular wave guide\string".png}
+
+figure 1.1: rectangular waveguide 
+\end{figure}
+ In the TE mode, we can comsider the eletric field z-component $E_{z}=0$,
+we can write electric field and magnetic field as:
+\par\end{flushleft}
+
+\end{enumerate}
+\begin{center}
+$\mathbf{E}(x,y,z)=\mathbf{e}(x,y)e^{-j\beta z}$
+\par\end{center}
+
+\begin{center}
+$\mathbf{H}(x,y,z)=[\mathbf{h}(x,y)+\hat{z}h_{z}(x,y)]e^{-j\beta z}$
+\par\end{center}
+
+\begin{flushleft}
+Where $\mathbf{e}(x,y),\mathbf{h}(x,y)$ are the $\hat{x},\hat{y}$
+component eletric and magnetic field, and $+\beta$ means propagate
+in $+z$ direction.Then we plug them into these two Maxwell's equations:
+\par\end{flushleft}
+
+\begin{center}
+$\nabla\times\mathbf{E=-}j\omega\mu\mathbf{H}$
+\par\end{center}
+
+\begin{center}
+$\nabla\times\mathbf{H=}j\omega\epsilon\mathbf{E}$
+\par\end{center}
+
+\begin{flushleft}
+by some calculation we get this differentuial equation:
+\par\end{flushleft}
+
+\begin{center}
+$\left(\dfrac{\partial^{2}}{\partial x^{2}}+\dfrac{\partial^{2}}{\partial y^{2}}+\dfrac{\partial^{2}}{\partial z^{2}}+k^{2}\right)H_{z}=0$,
+\par\end{center}
+
+\begin{flushleft}
+since$H_{z}=h(x,y)e^{-j\beta z}$ ,this can be reduced into two deminsional
+wave equation:
+\par\end{flushleft}
+
+\begin{center}
+$\left(\dfrac{\partial^{2}}{\partial x^{2}}+\dfrac{\partial^{2}}{\partial y^{2}}+k_{c}\right)h_{z}(x,y)=0-(\varhexstar)$
+\par\end{center}
+
+\begin{flushleft}
+where $k_{c}=\sqrt{k^{2}-\beta^{2}}$, this is called cutoff frequency.
+\par\end{flushleft}
+
+\begin{flushleft}
+2. We solve the equation $\varhexstar$ by using the method of seperation
+of variables, we have the general solution
+\par\end{flushleft}
+
+\begin{center}
+$h_{z}=(Acosk_{x}x+Bsink_{x}x)(Ccosk_{y}y+Dsink_{y}y)$
+\par\end{center}
+
+\begin{flushleft}
+and we apply the boundary conditions and Maxwell's equation:
+\par\end{flushleft}
+
+\begin{center}
+$\begin{cases}
+e_{x}(x,y)=0 & (y=0,b)\\
+e_{y}(x,y)=0 & (x=0,a)
+\end{cases}$ 
+\par\end{center}
+
+\begin{center}
+$\nabla\times\mathbf{H=}j\omega\epsilon\mathbf{E}$
+\par\end{center}
+
+\begin{flushleft}
+we can get 
+\par\end{flushleft}
+
+\begin{center}
+$k_{x}=\dfrac{m\pi}{a},k_{y}=\dfrac{n\pi}{b}(m,n\in\mathbb{N})$ 
+\par\end{center}
+
+\begin{flushleft}
+In this experiment $m=1,n=0$, so we finally get the answer:
+\par\end{flushleft}
+
+\begin{center}
+$H_{z}(x,y,z)=A_{mn}cos(\dfrac{\pi x}{a})e^{-j\beta z}$
+\par\end{center}
+
+\begin{center}
+$E_{x}(x,y,z)=0$
+\par\end{center}
+
+\begin{center}
+$E_{y}(x,y,z)=\dfrac{-j\omega\mu\pi}{k_{c}^{2}a}A_{mn}sin(\dfrac{\pi x}{a})e^{-j\beta z}$
+\par\end{center}
+
+\begin{center}
+$H_{x}(x,y,z)=\dfrac{j\beta\pi}{k_{c}^{2}}A_{mn}sin(\dfrac{\pi x}{a})e^{-j\beta z}$
+\par\end{center}
+
+\begin{center}
+$H_{y}(x,y,z)=0$
+\par\end{center}
+
+\begin{center}
+$\beta=\sqrt{k^{2}-k_{c}^{2}}=\sqrt{k^{2}-(\dfrac{\pi}{a})^{2}}$
+\par\end{center}
+
+\begin{flushleft}
+$\beta$ may be real number when $k>k_{c}$,
+\par\end{flushleft}
+
+\begin{center}
+$f=\dfrac{k_{c}}{2\pi\sqrt{\mu\epsilon}}=\dfrac{1}{2\pi\sqrt{\mu\epsilon}}\sqrt{\dfrac{\pi}{a}}$
+\par\end{center}
+
+\begin{flushleft}
+wave impedence:
+\par\end{flushleft}
+
+\begin{center}
+$Z_{TE}=\dfrac{E_{x}}{H_{y}}=\dfrac{-E_{y}}{H_{x}}=\dfrac{k\eta}{\beta}\hphantom{}(\eta=\sqrt{\dfrac{\mu}{\epsilon}})$
+\par\end{center}
+
+3. For $TE_{10}$ mode, the eletctromagnetic field distribution like
+figure 1.2:
+
+\begin{figure}[h]
+\centering
+\begin{centering}
+\label{Figure1.2=000020TE10=000020mode}
+\par\end{centering}
+\includegraphics[scale=0.4]{\string"figutre1.2 waveguide mode TE10\string".PNG}
+\centering{}figure1.2: $TE_{10}$ mode eletctromagnetic field distribution
+\end{figure}
+
+
+\section*{1.3 Standing Wave Ratio (SWR)}
+
+When an electromagnetic wave passes through two transmission lines
+or waveguides with different impedances, reflection and transmission
+occur, resulting in the formation of standing waves, which reduce
+the transmitted power. Therefore, we can measure the standing wave
+ratio (SWR) to quantify the degree of impedance matching. When the
+$SWR=1$, it indicates perfect impedance matching and no reflected
+waves.
+\clearpage
+\end{CJK}
+
+\end{document}
